@@ -23,6 +23,7 @@
 
     .head {
       position: relative;
+
       h2 {
         margin: 0;
         font-size: 2rem;
@@ -31,17 +32,26 @@
       }
 
       .like {
-          display: inline-block;
-          height: 30px;
-          width: 30px;
-          margin: 0 10px;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        margin: 0 10px;
+        border: none;
+        &:focus{
+          outline: none;
+        }
 
-          position: absolute;
-          right: 0; top: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
 
-          background-color: red;
+        transition: .2s;
 
-          transform: rotate(-45deg);
+        background-color: rgb(245,245,245);
+        transform: rotate(-45deg);
+        &:hover{
+          filter: brightness(70%);
+        }
 
         &:before,
         &:after {
@@ -51,7 +61,7 @@
           height: 30px;
           width: 30px;
 
-          background-color: red;
+          background-color: inherit;
           border-radius: 50%;
         }
 
@@ -64,6 +74,10 @@
           left: 15px;
           top: 0;
         }
+      }
+
+      .liked{
+        background-color: rgb(245,24,120);
       }
     }
 

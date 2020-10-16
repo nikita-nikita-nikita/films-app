@@ -11,10 +11,12 @@ export default class MovieService{
             image:"https://img.cinemablend.com/filter:scale/quill/b/7/8/7/0/9/b78709dcd036c94370781f8e7c106a215a47b80a.jpg?fw=1200",
         }
     ]
-    getMovies = () => this._movies;
+    getInitialMovies = () => this._movies;
     likeMovie = (movieId) => () => {
         const index = this._movies.findIndex(({id}) => movieId===id);
         this._movies[index].isLiked = !this._movies[index].isLiked;
+        console.log(this._movies);
+        window.localStorage.setItem("movies", JSON.stringify(this._movies));
     }
 }
 
