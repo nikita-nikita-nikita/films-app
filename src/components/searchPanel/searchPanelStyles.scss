@@ -1,0 +1,27 @@
+.search-panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  .search-input{
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    font-size: 1.2rem;
+    width: 75%;
+    &:focus{
+      outline: none;
+    }
+  }
+  .search-btn{
+    font-size: 1.2rem;
+    height: 100%;
+    width: 20%;
+    background-color: #FFE6CD;
+    border: 2px solid #E9C784;
+    &:focus{
+      outline: none;
+    }
+  }
+}
