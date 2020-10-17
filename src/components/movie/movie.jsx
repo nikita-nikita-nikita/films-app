@@ -1,9 +1,9 @@
 import React from "react";
 import "./stylesMovie.scss"
 
-const Movie = ({movie:{image, title, isLiked = false, description}, like}) => {
+const Movie = ({movie:{image, title, isLiked = false, description, id}, like}) => {
     return (
-        <div className="movie">
+        <li className="movie" key={id}>
             <img src={image} alt={title} width={130} height={130}/>
             <div className="main">
                 <div className="head">
@@ -12,7 +12,7 @@ const Movie = ({movie:{image, title, isLiked = false, description}, like}) => {
                 </div>
                 <p>{description}</p>
             </div>
-        </div>
+        </li>
     )
 }
 
